@@ -9,10 +9,10 @@ export default {
         },
 
         secondary: {
-            main: colors.orange['A700'],
+            main: colors.orange['A400'],
             dark: colors.orange['A700'],
             light: colors.orange['A200']
 
-        }
+        },
     }
 }
