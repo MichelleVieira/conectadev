@@ -9,8 +9,9 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button"
 import Link from "@material-ui/core/Link"
 import { useNavigate } from "react-router-dom";
-import authService from "../../services/authService";
 import FormHelperText from "@material-ui/core/FormHelperText";
+import { useDispatch } from 'react-redux';
+import { signIn } from '../../actions/accountActions'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -58,10 +59,13 @@ function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState();
+    const dispatch = useDispatch();
+
+
 
     async function handleSignIn() {
         try {
-            await authService.signIn(email, password)
+            await dispatch(signIn(email, password));
             navigate('/')
         }
         catch (error) {
@@ -69,13 +73,14 @@ function SignIn() {
         }
     }
 
+
     return (
         <Grid container className={classes.root}>
             <Grid
                 item
                 container
                 direction="column"
-                justify="center"
+                justifyContent="center"
                 alignItems="center"
                 md={7}
                 className={classes.image}>
