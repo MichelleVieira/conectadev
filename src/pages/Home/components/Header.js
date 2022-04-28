@@ -6,7 +6,6 @@ import Tollbar from '@material-ui/core/Toolbar'
 import SvgIcon from '@material-ui/core/SvgIcon'
 import { Bell } from 'react-feather'
 import Avatar from '@material-ui/core/Avatar'
-// import authService from '../../../services/authService'
 import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles({
@@ -49,7 +48,7 @@ function Header() {
     return (
         <AppBar className={classes.appBar} position='fixed' color='inherit' >
             <Tollbar>
-                <img className={classes.img} src='/images/logo.png' />
+                <img className={classes.img} src='/images/logo.png' alt='logo' />
                 <div className={classes.grow}></div>
                 <div className={classes.userSection}>
                     <Button className={classes.button} color='primary' variant='contained'>Novo Post</Button>

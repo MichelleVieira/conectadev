@@ -29,11 +29,11 @@ const post = [
             userName: 'MiVieira',
             avatar: '/images/avatars/avatar_1.jpeg'
         },
-        title: "Criando um app do zero utilizando React.js",
+        title: "Aprendendo Arrow functions",
         date: "September 17, 2021",
-        description: "Fala pessoal! Qual o framework favorito de vocês ?",
+        description: "Fala pessoal! Vocês sabem o que é arrow functios ?",
         hashtags: "#dotnet, #javascript, #reactjs, #developer",
-        image: "images/posts/post9.jpeg"
+        image: "images/posts/post-01.PNG"
     },
 ]
 
